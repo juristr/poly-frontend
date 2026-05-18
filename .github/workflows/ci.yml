@@ -10,9 +10,6 @@ permissions:
   actions: read
   contents: read
 
-env:
-  NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
-
 jobs:
   main:
     runs-on: ubuntu-latest
@@ -28,9 +25,6 @@ jobs:
           version: 10.12.1
           run_install: false
 
-      - name: start Nx Cloud task distribution
-        run: pnpm dlx nx start-ci-run --distribute-on="3 linux-medium-js" --auto-apply-fixes="*format*,*sync*" --stop-agents-after="lint,test,build,typecheck,e2e-ci"
-
       # Cache node_modules
       - uses: actions/setup-node@v4
         with:
@@ -42,13 +36,9 @@ jobs:
       - uses: nrwl/nx-set-shas@v4
 
       - name: check formatting
-        run: pnpm exec nx-cloud record -- nx format:check
+        run: pnpm exec nx format:check
 
       - name: check nx sync
-        run: pnpm exec nx-cloud record -- nx sync:check
+        run: pnpm exec nx sync:check
 
       - run: pnpm exec nx affected -t lint test build typecheck e2e-ci
-
-      # Nx Cloud recommends fixes for failures to help you get CI green faster. Learn more: https://nx.dev/ci/features/self-healing-ci
-      - run: pnpm exec nx fix-ci
-        if: always()
