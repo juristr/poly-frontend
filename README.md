@@ -15,7 +15,7 @@ pnpm install
 
 ## Run
 
-Start the backend first from `../tusky-backend`:
+Start the backend first from `../poly-backend`:
 
 ```sh
 pnpm dev
