@@ -35,4 +35,4 @@ jobs:
       - name: check nx sync
         run: npx nx sync:check
 
-      - run: npx nx affected -t lint test build typecheck e2e-ci
+      - run: npx nx affected -t lint test build typecheck e2e
