@@ -1,5 +1,5 @@
 import { ShoppingCart, Heart, Share2 } from 'lucide-react';
-import { Rating, Price, Button, IconButton } from '@polydemo/tusky-design';
+import { Rating, Price, Button, IconButton } from '@juristr/tusky-design';
 import { useState } from 'react';
 
 interface ProductDetailProps {

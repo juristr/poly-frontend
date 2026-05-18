@@ -6,7 +6,7 @@ import {
   Price,
   Button,
   IconButton,
-} from '@polydemo/tusky-design';
+} from '@juristr/tusky-design';
 import { Heart, ShoppingCart } from 'lucide-react';
 
 export interface ProductCardProps {
