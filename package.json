@@ -2,8 +2,20 @@
   "name": "@polydemo/frontend-source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "dev": "nx run @polydemo/shop:dev",
+    "build": "nx run @polydemo/shop:build",
+    "lint": "nx run-many -t lint --all",
+    "test": "nx run-many -t test --all",
+    "typecheck": "nx run-many -t typecheck --all",
+    "e2e": "nx run @polydemo/shop-e2e:e2e",
+    "validate": "nx run-many -t lint,test,typecheck,build --all"
+  },
   "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/products/*"
+  ],
   "dependencies": {
     "@react-router/node": "^7.2.0",
     "@react-router/serve": "^7.2.0",
@@ -61,6 +73,5 @@
     "vite": "^7.0.0",
     "vite-plugin-dts": "^4.5.4",
     "vitest": "^4.0.0"
-  },
-  "packageManager": "pnpm@10.12.1"
+  }
 }

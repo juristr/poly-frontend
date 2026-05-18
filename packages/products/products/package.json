@@ -12,7 +12,7 @@
     "./package.json": "./package.json"
   },
   "dependencies": {
-    "@polydemo/data-access-products": "workspace:*",
+    "@polydemo/data-access-products": "0.0.1",
     "@juristr/tusky-design": "1.1.0-beta.3",
     "lucide-react": "^0.555.0",
     "react-router-dom": "^7.9.6"

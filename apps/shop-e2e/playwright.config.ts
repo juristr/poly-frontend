@@ -24,7 +24,7 @@ export default defineConfig({
   },
   /* Run your local dev server before starting the tests */
   webServer: {
-    command: 'pnpm exec nx run @polydemo/shop:dev',
+    command: 'npm run dev',
     url: baseURL,
     reuseExistingServer: true,
     cwd: workspaceRoot,
