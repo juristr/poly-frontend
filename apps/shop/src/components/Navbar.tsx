@@ -1,5 +1,6 @@
 import { ShoppingCart, Search, User, Menu, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { PromoBanner } from '@juristr/tusky-design';
 
 const Navbar = () => {
   return (
@@ -92,13 +93,9 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="bg-indigo-600 py-2" data-testid="promo-banner">
-        <div className="container mx-auto px-4">
-          <p className="text-white text-center text-sm">
-            Free shipping on all orders over $50! Shop now and save.
-          </p>
-        </div>
-      </div>
+      <PromoBanner data-testid="promo-banner" aria-label="Promotional banner">
+        Free shipping on all orders over $50! Shop now and save.
+      </PromoBanner>
     </header>
   );
 };
