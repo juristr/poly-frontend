@@ -1,45 +1,78 @@
 # PolyShopping Frontend
 
-React frontend for the PolyShopping demo.
+React + Vite SPA for the **PolyShopping** demo. Browses a product catalog served by [`poly-backend`](../poly-backend).
+
+This repo is one of the demo repos used to showcase [Polygraph](https://polygraph.dev) — coordinating changes across multiple repos.
+
+## Stack
+
+- React 19 + react-router-dom
+- Vite 7 (dev/build)
+- Vitest + jsdom + @testing-library/react (unit tests)
+- Tailwind CSS v4 (via `@tailwindcss/vite`)
+- TypeScript (`tsc -b` runs as part of `build`)
 
 ## Requirements
 
 - Node.js 20+
 - npm 10+
 
-## Install
+## Run
+
+Start `poly-backend` first (defaults to `http://localhost:3000`):
+
+```sh
+cd ../poly-backend && npm run dev
+```
+
+Then the frontend:
 
 ```sh
 npm install
+npm run dev          # http://localhost:5173
 ```
 
-## Run
-
-Start the backend first from `../poly-backend`:
-
-```sh
-npm run dev
-```
-
-Then start the frontend:
-
-```sh
-npm run dev
-```
-
-The app listens on `http://localhost:4200` by default and calls the backend at `http://localhost:3000`.
-
-Override the API URL if needed:
+Override the API URL:
 
 ```sh
 VITE_API_URL=http://localhost:3001 npm run dev
 ```
 
-## Validate
+## Scripts
 
-```sh
-npm run validate
-npm run e2e
+| Script            | What it does                      |
+| ----------------- | --------------------------------- |
+| `npm run dev`     | Vite dev server                   |
+| `npm run build`   | `tsc -b` typecheck + `vite build` |
+| `npm run preview` | Serve the production build        |
+| `npm run test`    | `vitest run` (one-shot)           |
+
+## Project layout
+
+```
+src/
+  app.tsx                       router + layout
+  main.tsx                      entry
+  styles.css                    tailwind entry
+  components/
+    Navbar.tsx                  header + inline promo banner
+    Navbar.spec.tsx             vitest test for the promo banner
+    Footer.tsx
+    ProductCard.tsx
+    ProductGrid.tsx
+    ProductDetail.tsx
+  pages/
+    HomePage.tsx
+    ProductDetailPage.tsx       /product/:id
+  lib/
+    data-access-products.ts     fetch wrappers around poly-backend
 ```
 
-The e2e suite expects the backend to be running.
+## Backend contract
+
+`src/lib/data-access-products.ts` hits:
+
+- `GET /api/products` → `Product[]`
+- `GET /api/products/:id` → `Product` (or `404`)
+
+The `Product` shape lives in the same file. Keep it in sync with `poly-backend`.

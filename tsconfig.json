@@ -1,19 +1,7 @@
 {
-  "extends": "./tsconfig.base.json",
-  "compileOnSave": false,
   "files": [],
   "references": [
-    {
-      "path": "./apps/shop-e2e"
-    },
-    {
-      "path": "./apps/shop"
-    },
-    {
-      "path": "./packages/products/data-access-products"
-    },
-    {
-      "path": "./packages/products/products"
-    }
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
   ]
 }

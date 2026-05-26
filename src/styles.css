@@ -1,12 +1,7 @@
 @import 'tailwindcss';
 
-/* nx-tailwind-sources:start */
-@source "../../../packages/products/data-access-products";
-@source "../../../packages/products/products";
-/* nx-tailwind-sources:end */
-
 /* external npm package that uses Tailwind classes */
-@source "../../../node_modules/@juristr/tusky-design";
+@source "../node_modules/@juristr/tusky-design";
 
 /* Custom styles for glitch effect */
 @keyframes glitch {

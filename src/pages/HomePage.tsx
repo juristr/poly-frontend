@@ -1,4 +1,4 @@
-import { ProductGrid } from '@polydemo/products';
+import ProductGrid from '../components/ProductGrid';
 
 export function HomePage() {
   return (
