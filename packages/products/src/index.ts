@@ -1,3 +1,4 @@
+export * from './lib/data-access-products';
 export * from './lib/ProductGrid';
 export { default as ProductCard } from './lib/ProductCard';
 export type { ProductCardProps } from './lib/ProductCard';

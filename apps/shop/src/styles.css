@@ -1,8 +1,7 @@
 @import 'tailwindcss';
 
 /* nx-tailwind-sources:start */
-@source "../../../packages/products/data-access-products";
-@source "../../../packages/products/products";
+@source "../../../packages/products";
 /* nx-tailwind-sources:end */
 
 /* external npm package that uses Tailwind classes */

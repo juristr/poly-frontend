@@ -1,5 +1,5 @@
 {
-  "extends": "../../../tsconfig.base.json",
+  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "outDir": "out-tsc/products",
     "lib": ["es2022", "dom"],
@@ -30,9 +30,5 @@
     "vitest.config.mts"
   ],
   "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"],
-  "references": [
-    {
-      "path": "../data-access-products/tsconfig.lib.json"
-    }
-  ]
+  "references": []
 }

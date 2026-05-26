@@ -10,10 +10,7 @@
       "path": "./apps/shop"
     },
     {
-      "path": "./packages/products/data-access-products"
-    },
-    {
-      "path": "./packages/products/products"
+      "path": "./packages/products"
     }
   ]
 }

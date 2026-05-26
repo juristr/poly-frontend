@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import ProductCard from './ProductCard';
-import { getProducts, Product } from '@polydemo/data-access-products';
+import { getProducts, Product } from './data-access-products';
 
 export function ProductGrid() {
   const [products, setProducts] = useState<Product[]>([]);

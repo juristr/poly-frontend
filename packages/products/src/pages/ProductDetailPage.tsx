@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getProductById, Product } from '@polydemo/data-access-products';
+import { getProductById, Product } from '../lib/data-access-products';
 import { ProductDetail } from '../lib/ProductDetail';
 
 export function ProductDetailPage() {
