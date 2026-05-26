@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   root: __dirname,
-  cacheDir: '../../node_modules/.vite/apps/shop',
+  cacheDir: './node_modules/.vite/shop',
   server: {
     port: 4200,
     host: 'localhost',

@@ -1,5 +1,5 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "outDir": "out-tsc/shop",
     "tsBuildInfoFile": "out-tsc/shop/tsconfig.app.tsbuildinfo",

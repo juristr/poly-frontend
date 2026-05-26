@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 /* external npm package that uses Tailwind classes */
-@source "../../../node_modules/@juristr/tusky-design";
+@source "../node_modules/@juristr/tusky-design";
 
 /* Custom styles for glitch effect */
 @keyframes glitch {
