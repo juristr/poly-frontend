@@ -3,9 +3,7 @@
   "version": "0.0.1",
   "type": "module",
   "private": true,
-  "dependencies": {
-    "@polydemo/products": "0.0.1"
-  },
+  "dependencies": {},
   "devDependencies": {},
   "nx": {
     "tags": [

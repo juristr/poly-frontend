@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
-import { ProductDetailPage } from '@polydemo/products';
+import ProductDetailPage from './pages/ProductDetailPage';
 
 export function App() {
   return (
